@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Anand Kumar",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-c031c6",
+      "id": "nucleo",
+      "top": -56.77,
+      "left": -0.98,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 92.4, "left": 320.6, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "led1:C", "nucleo:GND.9", "green", [ "v19.2", "h-114.8" ] ],
+    [ "led1:A", "nucleo:D13", "green", [ "v28.8", "h-124.8" ] ]
+  ],
+  "dependencies": {}
+}

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "author": "Embedded C ES",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-st-nucleo-c031c6",
+      "id": "nucleo",
+      "top": -8.77,
+      "left": -144.98,
+      "attrs": {}
+    },
+    { "type": "wokwi-led", "id": "led1", "top": 25.2, "left": 167, "attrs": { "color": "green" } },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 25.2,
+      "left": 234.2,
+      "attrs": { "color": "yellow" }
+    },
+    { "type": "wokwi-led", "id": "led3", "top": 25.2, "left": 311, "attrs": { "color": "red" } }
+  ],
+  "connections": [
+    [ "$serialMonitor:TX", "nucleo:PA3", "", [] ],
+    [ "$serialMonitor:RX", "nucleo:PA2", "", [] ],
+    [ "nucleo:D11", "led3:A", "green", [ "h266.45", "v-38.4" ] ],
+    [ "led2:A", "nucleo:D12", "green", [ "v96", "h-9.6" ] ],
+    [ "nucleo:D13", "led1:A", "green", [ "h0" ] ],
+    [ "nucleo:GND.9", "led1:C", "black", [ "h0" ] ],
+    [ "nucleo:GND.9", "led2:C", "black", [ "h0" ] ],
+    [ "nucleo:GND.9", "led3:C", "black", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
